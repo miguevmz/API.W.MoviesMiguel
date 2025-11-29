@@ -1,9 +1,13 @@
-﻿using API.W.Movies.DAL.Models.Dtos;
+﻿using API.W.Movies.DAL.Models;
+using API.W.Movies.DAL.Models.Dtos;
 using API.W.Movies.Services.IServices;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.W.Movies.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class CategoriesController : ControllerBase
     {
         private readonly ICategoryService _categoryService;
