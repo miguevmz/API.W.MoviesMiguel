@@ -14,8 +14,8 @@ namespace API.W.Movies.MoviesMapper
 
             //MOVIE
 
-            //CreateMap<Movie, MovieDto>().ReverseMap(); 
-            //CreateMap<Movie, MovieCreateUpdateDto>().ReverseMap(); 
+            CreateMap<Movie, MovieDto>().ReverseMap(); 
+            CreateMap<Movie, MovieCreateUpdateDto>().ReverseMap(); 
         }
     }
 }

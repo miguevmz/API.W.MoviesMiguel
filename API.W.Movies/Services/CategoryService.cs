@@ -127,7 +127,7 @@ namespace API.W.Movies.Services
 
             if (!categoryUpdated)
             {
-                throw new Exception("Ocurrio un error al actualziar la categoria");
+                throw new Exception("Ocurrio un error al actualizar la categoria");
             }
 
             //Retornar el DTO actualizado

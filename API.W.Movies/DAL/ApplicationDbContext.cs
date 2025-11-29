@@ -14,7 +14,7 @@ namespace API.W.Movies.DAL
         public DbSet<Category> Categories { get; set; } = null!;
 
         //DbSet para Movie
-        //public DbSet<Movie> Movies { get; set; } = null!;
+        public DbSet<Movie> Movies { get; set; } = null!;
 
     }
 }
