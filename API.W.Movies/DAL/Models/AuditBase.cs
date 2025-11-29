@@ -8,8 +8,8 @@ namespace API.W.Movies.DAL.Models
         public virtual int Id { get; set; }
 
 
-        public virtual DateTime? CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; }//Me indica la fehca de creacion
 
-        public virtual DateTime? ModifiedDate {  get; set; }
+        public DateTime? UpdateDate { get; set; }//me indica la fecha 
     }
 }

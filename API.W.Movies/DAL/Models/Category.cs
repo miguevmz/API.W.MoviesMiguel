@@ -6,6 +6,7 @@ namespace API.W.Movies.DAL.Models
     {
         [Required] //Este data annotation indica que el campo es obligatorio
         [Display(Name ="Nombre de la categoria")] //Me sirve para personalizar el nombre que se muestra en las vistas o mesnajes de error
+        [MaxLength]
         public string Name { get; set; }
     }
 }

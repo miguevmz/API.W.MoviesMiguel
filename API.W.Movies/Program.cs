@@ -1,11 +1,30 @@
 using API.W.Movies.DAL;
+using API.W.Movies.MoviesMapper;
+using API.W.Movies.Repository;
+using API.W.Movies.Repository.IRepository;
+using API.W.Movies.Services;
+using API.W.Movies.Services.IServices;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
+
+
+// o tu namespace real del DbContext
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection")));
+
+builder.Services.AddDbContext<ApplicationDbContext>(Options => Options.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection")));
+builder.Services.AddAutoMapper(cfg => cfg.AddProfile<Mappers>());
+
+//Dependency Inhection for Services
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
+//Dependency Inhection for Repositories
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+//Registro de servicios Movie
+//builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+//builder.Services.AddScoped<IMovieService, MovieService>();
 
 
 builder.Services.AddControllers();

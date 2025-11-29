@@ -9,8 +9,12 @@ namespace API.W.Movies.DAL
         {
 
         }
-         //Seccion para crear el Dbser de las entidades o modelos
+        //Seccion para crear el Dbser de las entidades o modelos
 
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<Category> Categories { get; set; } = null!;
+
+        //DbSet para Movie
+        //public DbSet<Movie> Movies { get; set; } = null!;
+
     }
 }
